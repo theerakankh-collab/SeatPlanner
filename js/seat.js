@@ -45,24 +45,24 @@ function buildSeatMap() {
   seatMap.appendChild(row3);
 
   // ===== ผู้ร่วมพิธี =====
+let number = 1;
 
-  let number = 1;
+for (let r = 0; r < 4; r++) {
 
-  for(let r=0;r<4;r++){
+    const row = document.createElement("div");
+    row.className = "row";
 
-      const row=document.createElement("div");
-      row.className="row";
+    const seats = [];
 
-      for(let c=0;c<10;c++){
+    for (let c = 0; c < 10; c++) {
+        seats.push(createSeat(number));
+        number++;
+    }
 
-          row.appendChild(createSeat(number));
-          number++;
+    // เรียงจากขวาไปซ้าย
+    seats.reverse().forEach(seat => row.appendChild(seat));
 
-      }
-
-      seatMap.appendChild(row);
-
-  }
+    seatMap.appendChild(row);
 
 }
 

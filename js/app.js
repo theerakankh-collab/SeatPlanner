@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     buildSeatMap();
 
+    loadSeats();
+
     document
     .getElementById("importBtn")
     .onclick=()=>{
@@ -93,7 +95,7 @@ function dropSeat(e){
     if(dragSeat === target) return;
 
     swapSeat(dragSeat,target);
-
+    
 }
 function swapSeat(a,b){
 
@@ -121,6 +123,7 @@ document.addEventListener("click", function (e) {
     const seat = e.target.closest(".seat");
 
     if (!seat) return;
+    
 
     // ยังไม่ได้เลือกที่นั่งแรก
     if (firstSeat == null) {

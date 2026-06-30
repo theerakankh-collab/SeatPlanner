@@ -5,7 +5,7 @@ function createSeat(number, label = number) {
   seat.className = "seat";
   seat.id = "seat-" + number;
   seat.innerHTML = `
-    <div class="seat-number">${number}</div>
+    <div class="seat-number">${label}</div>
     <div class="seat-name"></div>
   `;
   return seat;

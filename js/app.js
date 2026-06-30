@@ -161,3 +161,29 @@ function swapSeat(a, b) {
     b.style.background = bgA;
 
 }
+function saveSeats() {
+
+    const data = [];
+
+    document.querySelectorAll(".seat").forEach(seat => {
+
+        data.push({
+
+            id: seat.id,
+
+            number: seat.querySelector(".seat-number").innerHTML,
+
+            name: seat.querySelector(".seat-name").innerHTML,
+
+            color: seat.style.background
+
+        });
+
+    });
+
+    localStorage.setItem(
+        "SeatPlanner",
+        JSON.stringify(data)
+    );
+
+}

@@ -146,3 +146,18 @@ document.addEventListener("click", function (e) {
     firstSeat = null;
 
 });
+function swapSeat(a, b) {
+
+    const nameA = a.querySelector(".seat-name").innerHTML;
+    const nameB = b.querySelector(".seat-name").innerHTML;
+
+    a.querySelector(".seat-name").innerHTML = nameB;
+    b.querySelector(".seat-name").innerHTML = nameA;
+
+    const bgA = a.style.background;
+    const bgB = b.style.background;
+
+    a.style.background = bgB;
+    b.style.background = bgA;
+
+}

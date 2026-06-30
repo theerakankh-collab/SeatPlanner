@@ -19,9 +19,9 @@ function buildSeatMap() {
   const president = document.createElement("div");
   president.className = "president";
 
-  president.appendChild(createSeat(2,"A2"));
-  president.appendChild(createSeat(1,"A1"));
   president.appendChild(createSeat(3,"A3"));
+  president.appendChild(createSeat(1,"A1"));
+  president.appendChild(createSeat(2,"A2"));
 
   seatMap.appendChild(president);
 

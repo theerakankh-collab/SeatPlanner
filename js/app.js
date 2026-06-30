@@ -187,3 +187,28 @@ function saveSeats() {
     );
 
 }
+function loadSeats() {
+
+    const json =
+        localStorage.getItem("SeatPlanner");
+
+    if (!json) return;
+
+    const data = JSON.parse(json);
+
+    data.forEach(item => {
+
+        const seat =
+            document.getElementById(item.id);
+
+        if (!seat) return;
+
+        seat.querySelector(".seat-name").innerHTML =
+            item.name;
+
+        seat.style.background =
+            item.color;
+
+    });
+
+}

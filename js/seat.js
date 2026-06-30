@@ -39,7 +39,7 @@ function buildSeatMap() {
   row3.className = "row";
 
   [14,12,10,11,13,15].forEach(n=>{
-    row3.appendChild(createSeat(n));
+    row3.appendChild(createSeat(n,"A"+n));
 });
   
   seatMap.appendChild(row3);

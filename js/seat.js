@@ -19,9 +19,9 @@ function buildSeatMap() {
   const president = document.createElement("div");
   president.className = "president";
 
-  president.appendChild(createSeat(2));
-  president.appendChild(createSeat(1));
-  president.appendChild(createSeat(3));
+  president.appendChild(createSeat(2,"A2"));
+  president.appendChild(createSeat(1,"A1"));
+  president.appendChild(createSeat(3,"A3"));
 
   seatMap.appendChild(president);
 
@@ -30,9 +30,8 @@ function buildSeatMap() {
   row2.className = "row";
 
   [8,6,4,5,7,9].forEach(n=>{
-    row2.appendChild(createSeat(n));
-  });
-
+    row2.appendChild(createSeat(n,"A"+n));
+});
   seatMap.appendChild(row2);
 
   // แถวที่ 3
@@ -41,8 +40,8 @@ function buildSeatMap() {
 
   [14,12,10,11,13,15].forEach(n=>{
     row3.appendChild(createSeat(n));
-  });
-
+});
+  
   seatMap.appendChild(row3);
 
   // ===== ผู้ร่วมพิธี =====

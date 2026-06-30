@@ -1,6 +1,6 @@
 const seatMap = document.getElementById("seatMap");
 
-function createSeat(number) {
+function createSeat(number, label = number) {
   const seat = document.createElement("div");
   seat.className = "seat";
   seat.id = "seat-" + number;

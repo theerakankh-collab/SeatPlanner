@@ -43,7 +43,11 @@ function buildSeatMap() {
 });
   
   seatMap.appendChild(row3);
-
+// ===== เส้นคั่นระหว่างประธานกับผู้ร่วมพิธี =====
+const divider1 = document.createElement("hr");
+divider1.className = "section-divider";
+seatMap.appendChild(divider1);
+  
   // ===== ผู้ร่วมพิธี =====
 let number = 1;
 
@@ -57,10 +61,17 @@ for (let r = 0; r < 4; r++) {
 
     for (let c = 0; c < 10; c++) {
 
-        row.appendChild(createSeat(start));
-        start--;
+    row.appendChild(createSeat(start));
+    start--;
 
+    // เส้นแบ่งแนวตั้งตรงกลาง
+    if (c === 4) {
+        const divider = document.createElement("div");
+        divider.className = "vertical-divider";
+        row.appendChild(divider);
     }
+
+}
 
     number += 10;
 

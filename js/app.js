@@ -70,3 +70,28 @@ function searchSeat(){
     }
 
 }
+let dragSeat = null;
+
+function dragStart(e){
+
+    dragSeat = e.currentTarget;
+
+}
+
+function dragOver(e){
+
+    e.preventDefault();
+
+}
+
+function dropSeat(e){
+
+    e.preventDefault();
+
+    const target = e.currentTarget;
+
+    if(dragSeat === target) return;
+
+    swapSeat(dragSeat,target);
+
+}

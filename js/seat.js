@@ -65,7 +65,7 @@ for (let r = 0; r < 4; r++) {
     number += 10;
 
     seatMap.appendChild(row);
-
+}
 }
 
 buildSeatMap();

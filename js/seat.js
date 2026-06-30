@@ -29,7 +29,7 @@ function buildSeatMap() {
   const row2 = document.createElement("div");
   row2.className = "row";
 
-  [8,6,4,5,7,9].forEach(n=>{
+  [9,7,5,4,6,8].forEach(n=>{
     row2.appendChild(createSeat(n,"A"+n));
 });
   seatMap.appendChild(row2);
@@ -38,7 +38,7 @@ function buildSeatMap() {
   const row3 = document.createElement("div");
   row3.className = "row";
 
-  [14,12,10,11,13,15].forEach(n=>{
+  [15,13,11,10,12,14].forEach(n=>{
     row3.appendChild(createSeat(n,"A"+n));
 });
   

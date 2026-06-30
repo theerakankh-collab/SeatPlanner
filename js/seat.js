@@ -45,7 +45,7 @@ function buildSeatMap() {
   seatMap.appendChild(row3);
 
   // ===== ผู้ร่วมพิธี =====
-let number = 16;
+let number = 1;
 
 for (let r = 0; r < 4; r++) {
 

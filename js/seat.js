@@ -12,7 +12,11 @@ function createSeat(id,label){
         <div class="seat-number">${label}</div>
         <div class="seat-name"></div>
     `;
+    seat.draggable = true;
 
+    seat.addEventListener("dragstart", dragStart);
+    seat.addEventListener("dragover", dragOver);
+    seat.addEventListener("drop", dropSeat);
     return seat;
 
 }

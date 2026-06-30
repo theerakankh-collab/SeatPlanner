@@ -102,3 +102,40 @@ h1{
     background:#0D47A1;
 
 }
+#searchBox{
+
+    width:220px;
+
+    padding:10px;
+
+    margin-left:15px;
+
+    border-radius:6px;
+
+    border:1px solid #bbb;
+
+}
+
+#searchBtn{
+
+    padding:10px 18px;
+
+    margin-left:5px;
+
+    border:none;
+
+    background:#43A047;
+
+    color:white;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+#searchBtn:hover{
+
+    background:#2E7D32;
+
+}

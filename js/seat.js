@@ -1,14 +1,20 @@
 const seatMap = document.getElementById("seatMap");
 
-function createSeat(number, label = number) {
-  const seat = document.createElement("div");
-  seat.className = "seat";
-  seat.id = "seat-" + number;
-  seat.innerHTML = `
-    <div class="seat-number">${label}</div>
-    <div class="seat-name"></div>
-  `;
-  return seat;
+function createSeat(id, label) {
+
+    const seat = document.createElement("div");
+
+    seat.className = "seat";
+
+    seat.id = "seat-" + id;
+
+    seat.innerHTML = `
+        <div class="seat-number">${label}</div>
+        <div class="seat-name"></div>
+    `;
+
+    return seat;
+
 }
 
 function buildSeatMap() {

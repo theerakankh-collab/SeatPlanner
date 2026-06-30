@@ -52,15 +52,17 @@ for (let r = 0; r < 4; r++) {
     const row = document.createElement("div");
     row.className = "row";
 
-    const seats = [];
+    // เริ่มเลขของแต่ละแถว
+    let start = number + 9;
 
     for (let c = 0; c < 10; c++) {
-        seats.push(createSeat(number));
-        number++;
+
+        row.appendChild(createSeat(start));
+        start--;
+
     }
 
-    // เรียงจากขวาไปซ้าย
-    seats.reverse().forEach(seat => row.appendChild(seat));
+    number += 10;
 
     seatMap.appendChild(row);
 

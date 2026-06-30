@@ -50,3 +50,18 @@ h1{
     text-align:center;
     margin-top:4px;
 }
+/* เส้นคั่นระหว่างประธานกับผู้ร่วมพิธี */
+.section-divider{
+    width:100%;
+    border:none;
+    border-top:3px solid #333;
+    margin:40px 0;
+}
+
+/* เส้นคั่นกลางผู้ร่วมพิธี */
+.middle-divider{
+    width:100%;
+    border:none;
+    border-top:2px dashed #777;
+    margin:30px 0;
+}

@@ -191,7 +191,7 @@ function fillSeat(rows){
         );
 
     }else{
-
+        saveSeats();
         alert("นำเข้าข้อมูลสำเร็จ");
 
     }

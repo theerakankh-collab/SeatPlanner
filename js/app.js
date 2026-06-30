@@ -95,3 +95,22 @@ function dropSeat(e){
     swapSeat(dragSeat,target);
 
 }
+function swapSeat(a,b){
+
+    const nameA =
+    a.querySelector(".seat-name").innerHTML;
+
+    const nameB =
+    b.querySelector(".seat-name").innerHTML;
+
+    a.querySelector(".seat-name").innerHTML = nameB;
+
+    b.querySelector(".seat-name").innerHTML = nameA;
+
+    const colorA = a.style.background;
+    const colorB = b.style.background;
+
+    a.style.background = colorB;
+    b.style.background = colorA;
+
+}

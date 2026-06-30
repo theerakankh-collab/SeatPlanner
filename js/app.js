@@ -114,3 +114,35 @@ function swapSeat(a,b){
     b.style.background = colorA;
 
 }
+let firstSeat = null;
+
+document.addEventListener("click", function (e) {
+
+    const seat = e.target.closest(".seat");
+
+    if (!seat) return;
+
+    // ยังไม่ได้เลือกที่นั่งแรก
+    if (firstSeat == null) {
+
+        firstSeat = seat;
+        seat.classList.add("selected");
+
+        return;
+    }
+
+    // แตะที่เดิม ยกเลิก
+    if (firstSeat === seat) {
+
+        seat.classList.remove("selected");
+        firstSeat = null;
+
+        return;
+    }
+
+    swapSeat(firstSeat, seat);
+
+    firstSeat.classList.remove("selected");
+    firstSeat = null;
+
+});

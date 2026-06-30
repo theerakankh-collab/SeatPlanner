@@ -15,17 +15,27 @@
 
 <h1>ระบบจัดที่นั่งพิธี</h1>
 
-<button id="importBtn">นำเข้า Excel</button>
+<div class="toolbar">
 
-<input
-type="file"
-id="excelFile"
-accept=".xls,.xlsx"
-hidden>
+    <button id="importBtn">
+        📄 นำเข้า Excel
+    </button>
 
-<hr>
+    <input
+        type="file"
+        id="excelFile"
+        accept=".xls,.xlsx"
+        hidden>
 
-<div id="seatMap"></div>
+</div>
+
+<div class="seat-wrapper">
+
+    <div id="seatMap"></div>
+
+    <div class="center-line"></div>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 

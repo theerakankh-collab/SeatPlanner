@@ -67,7 +67,7 @@ for (let r = 0; r < 4; r++) {
 
     for (let c = 0; c < 10; c++) {
 
-    row.appendChild(createSeat(start));
+    row.appendChild(createSeat("B"+start, start));
     start--;
 
     // เส้นแบ่งแนวตั้งตรงกลาง
